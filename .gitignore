@@ -1,0 +1,6 @@
+__pycache__
+venv
+*.egg-info
+chat_web/frontend_static
+build
+dist
