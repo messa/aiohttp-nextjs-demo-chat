@@ -1,6 +1,17 @@
 Chat demo web app created with aiohttp and next.js
 ==================================================
 
+Requirements:
+
+- Python 3.6
+- aiohttp, requests_oauthlib etc. – Python dependencies managed by `setup.py`
+- node.js, npm
+
+See `Dockerfile` or `Makefile` how to run this example.
+
+See also my [`aiohttp.web` tips](https://github.com/messa/tips/blob/master/Python%20-%20aiohttp%20server.md) :)
+
+
 Architecture
 ------------
 
@@ -40,3 +51,4 @@ Using `npm run dev` that runs `next` with HMR etc.
                              (see nginx.conf)                |
                                                              | /*
                                                              +--------> Next.js development server
+
