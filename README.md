@@ -13,20 +13,20 @@ Architecture
                     pages/*.js         -------------->   out/_next/…/page/*.js
                     components/*.js                      out/_next/static/commons/main-….js
                     util/*.js                            out/index.html
-                                                         out/chat/index.html                 <-+
-                                                         out/login/index.html                  | serve
-                                                                                               | HTML & JS
-                                                                                               | as static
-                                                                                               | files
-    Deployed:                                                                                  |
-                                                                                               | /*
-                    User           HTTPS, WSS    nginx or other    HTTP, WS    aiohttp         |
-                    Web browser  ------------->  load balancer   ----------->  web app  -------+
-                                                                                               | /api/*
-                                                                                               | /auth/*
-                                                                                               v
-                                                                                         JSON API with
-                                                                                           live data
+                                                         out/chat/index.html                    <-+
+                                                         out/login/index.html                     | serve
+                                                                                                  | HTML & JS
+                                                                                                  | as static
+                                                                                                  | files
+    Deployed:                                                                             request |
+                                                                                          path    | /*
+                    User           HTTPS, WSS    nginx or other    HTTP, WS    aiohttp    routing |
+                    Web browser  ------------->  load balancer   ----------->  web app  ----------+
+                                                                                                  | /api/*
+                                                                                                  | /auth/*
+                                                                                                  v
+                                                                                            JSON API with
+                                                                                              live data
 
 ### Development
 
