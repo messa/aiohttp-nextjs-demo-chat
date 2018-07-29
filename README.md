@@ -7,30 +7,31 @@ Architecture
 ### Production
 
 
-    Build phase:           
+    Build phase:
                     Next.js app                          Static files (prerendered)
-                    ~~~~~~~~~~~~~~~~     next export     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-                    pages/*.js         -------------->   out/_next/…/page/*.js              
-                    components/*.js                      out/_next/static/commons/main-….js 
-                    util/*.js                            out/index.html                     
+                    ~~~~~~~~~~~~~~~~     next export     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    pages/*.js         -------------->   out/_next/…/page/*.js
+                    components/*.js                      out/_next/static/commons/main-….js
+                    util/*.js                            out/index.html
                                                          out/chat/index.html                 <-+
-                                                         out/login/index.html                  | serve 
-                                                                                               | HTML & JS 
-    Deployed:                                                                                  | as static
-                                                                                               | fifles
+                                                         out/login/index.html                  | serve
+                                                                                               | HTML & JS
+                                                                                               | as static
+                                                                                               | files
+    Deployed:                                                                                  |
+                                                                                               | /*
                     User           HTTPS, WSS    nginx or other    HTTP, WS    aiohttp         |
                     Web browser  ------------->  load balancer   ----------->  web app  -------+
-                                                                                               |
+                                                                                               | /api/*
+                                                                                               | /auth/*
                                                                                                v
                                                                                          JSON API with
                                                                                            live data
-                                                                                           
-### Development 
+
+### Development
 
 Using `npm run dev` that runs `next` with HMR etc.
 
-    
-    
                                                                /api/*
                                                                /auth/*
                                                              +---------> aiohttp web app
@@ -39,5 +40,3 @@ Using `npm run dev` that runs `next` with HMR etc.
                              (see nginx.conf)                |
                                                              | /*
                                                              +--------> Next.js development server
-                                                    
-                                                  
