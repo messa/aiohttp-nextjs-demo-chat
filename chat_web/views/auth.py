@@ -42,7 +42,7 @@ async def auth_methods(req):
     conf = req.app['conf']
     methods = {
         'fb': '/auth/facebook' if conf.fb_oauth2 else None,
-        'google': '/auth/google' if conf.fb_oauth2 else None,
+        'google': '/auth/google' if conf.google_oauth2 else None,
         'dev': '/auth/dev' if conf.allow_dev_login else None,
     }
     if not any(methods.values()):
