@@ -52,3 +52,10 @@ Using `npm run dev` that runs `next` with HMR etc.
                                                              | /*
                                                              +--------> Next.js development server
 
+
+Links
+-----
+
+Similar projects etc., not directly related to this repo
+
+https://steelkiwi.com/blog/an-example-of-a-simple-chat-written-in-aiohttp/
